@@ -1,5 +1,7 @@
 # Credentials and secrets
 .credentials.json
+auth.json
+cap_sid
 *.bak
 *.rtk-bak
 
@@ -10,6 +12,12 @@ statsig/
 stats-cache.json
 history.jsonl
 mcp-needs-auth-cache.json
+models_cache.json
+
+# Databases and state
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
 
 # Session-specific
 plans/
@@ -18,9 +26,17 @@ tasks/
 projects/
 session-env/
 shell-snapshots/
+shell_snapshots/
 paste-cache/
 file-history/
 debug/
 ide/
 backups/
 plugins/
+sessions/
+log/
+tmp/
+.sandbox/
+.sandbox-secrets/
+vendor_imports/
+.personality_migration
