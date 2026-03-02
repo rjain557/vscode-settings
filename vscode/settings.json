@@ -1,0 +1,32 @@
+{
+  "chatgpt.runCodexInWindowsSubsystemForLinux": true,
+  "chat.tools.terminal.autoReplyToPrompts": true,
+    "claudeCode.preferredLocation": "panel",
+    "http.systemCertificatesNode": true,
+    "geminicodeassist.project": "western-poetry-mp35s",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "claudeCode.selectedModel": "default",
+    "git.confirmSync": false,
+    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+    "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+    "swift.warnAboutSymlinkCreation": false,
+    "mssql.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "ROOT"
+        }
+    ],
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "security.workspace.trust.untrustedFiles": "open"
+    "chat.tools.global.autoApprove": true
+    
+}
+
+
+
+
+
+

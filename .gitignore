@@ -1,0 +1,26 @@
+# Credentials and secrets
+.credentials.json
+*.bak
+*.rtk-bak
+
+# Caches and ephemeral data
+cache/
+telemetry/
+statsig/
+stats-cache.json
+history.jsonl
+mcp-needs-auth-cache.json
+
+# Session-specific
+plans/
+todos/
+tasks/
+projects/
+session-env/
+shell-snapshots/
+paste-cache/
+file-history/
+debug/
+ide/
+backups/
+plugins/

@@ -1,0 +1,91 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pushd:*)",
+      "Bash(popd)",
+      "Bash(git add:*)",
+      "Bash(dir /B \"c:\\\\Users\\\\rjain\\\\OneDrive - Technijian, Inc\\\\Documents\\\\VSCode\\\\orx-mcp-waystar\\\\orx-mcp-waystar\\\\docs\")",
+      "Bash(if not exist \"c:\\\\Users\\\\rjain\\\\OneDrive - Technijian, Inc\\\\Documents\\\\VSCode\\\\orx-mcp-waystar\\\\orx-mcp-waystar\\\\docs\\\\review\\\\findings\" mkdir \"c:\\\\Users\\\\rjain\\\\OneDrive - Technijian, Inc\\\\Documents\\\\VSCode\\\\orx-mcp-waystar\\\\orx-mcp-waystar\\\\docs\\\\review\\\\findings\")",
+      "Bash(cmd /c:*)",
+      "Bash(if not exist \"c:\\\\Users\\\\rjain\\\\OneDrive - Technijian, Inc\\\\Documents\\\\VSCode\\\\orx-mcp-waystar\\\\orx-mcp-waystar\\\\docs\\\\review\" mkdir \"c:\\\\Users\\\\rjain\\\\OneDrive - Technijian, Inc\\\\Documents\\\\VSCode\\\\orx-mcp-waystar\\\\orx-mcp-waystar\\\\docs\\\\review\")",
+      "Read(//c/Users/rjain/OneDrive - Technijian, Inc/Documents/VSCode/orx-mcp-waystar/orx-mcp-waystar/**)",
+      "Bash(wc:*)",
+      "Bash(grep:*)",
+      "Bash(cd:*)",
+      "Bash(dotnet build:*)",
+      "Bash(dir /s /b /a:-d)",
+      "Read(//c/Users/rjain/OneDrive - Technijian, Inc/Documents/VSCode/tech-webt-chatai.2/**)",
+      "Bash(dotnet restore:*)",
+      "Bash(npm install:*)",
+      "Bash(test:*)",
+      "Read(//c/**)",
+      "Bash(powershell -Command:*)",
+      "Bash(npx get-shit-done-cc --claude --global)",
+      "Bash(git commit:*)",
+      "Bash(ls -la \"C:\\\\Users\\\\rjain\\\\.claude\"\" 2>/dev/null || echo \"Directory not accessible \")",
+      "Bash(ls \"C:\\\\Users\\\\rjain\\\\.claude\\\\agents\"\" && echo \"---\" && ls \"C:Usersrjain.claudecommandsgsd\"\")",
+      "Bash(git fetch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git rm:*)",
+      "Bash(git push:*)",
+      "Skill(gsd:complete-milestone)",
+      "Skill(gsd:complete-milestone:*)",
+      "Skill(gsd:audit-milestone)",
+      "Skill(gsd:audit-milestone:*)",
+      "Bash(node:*)",
+      "Bash(dir:*)",
+      "Bash(Get-Process -Name \"powershell\",\"pwsh\",\"claude\" -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object Id,ProcessName,StartTime,CPU)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(powershell:*)",
+      "Bash(gh repo clone:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat\\(gsd-runner\\): token optimization defaults and -TokenProfile preset\n\nDefault model/turn settings now optimized for staying within usage limits:\n- PrepModel defaults to \"sonnet\" \\(was \"\" = opus\\) â€” research+plan don''t need opus\n- ReviewModel defaults to \"sonnet\" \\(was \"\" = opus\\) â€” review subagents also benefit\n- Turn limits reduced: research 30 \\(was 50\\), plan 50 \\(was 75\\), execute 100 \\(was 150\\),\n  review 75 \\(was 100\\), remediation 30 \\(was 50\\)\n- MaxParallel defaults to 2 \\(was 3\\) â€” fewer concurrent agents = slower token burn\n\nNew -TokenProfile preset parameter:\n- \"balanced\" \\(default\\): sonnet for prep/review, opus for execution\n- \"budget\": all sonnet, tight turn limits\n- \"full\": all opus, high turns \\(original behavior\\)\n\nUsage: gsd-run -TokenProfile budget\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git pull:*)",
+      "Skill(admin:sql:*)",
+      "Skill(admin:iis:*)",
+      "Skill(admin:m365:*)",
+      "Skill(admin:help)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\rjain\\.claude\\commands\\gsd",
+      "C:\\Users\\rjain\\.claude\\commands\\admin"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/rjain/.claude/hooks/gsd-check-update.js\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:/Users/rjain/.claude/hooks/rtk-rewrite.py\""
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node \"C:/Users/rjain/.claude/hooks/gsd-statusline.js\""
+  },
+  "enabledPlugins": {
+    "ralph-skills@ralph-marketplace": true,
+    "frontend-design@claude-code-plugins": true
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "mcpServers": {
+    "playwright": {
+      "command": "playwright-mcp"
+    }
+  }
+}

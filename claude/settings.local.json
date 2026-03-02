@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm view:*)",
+      "Bash(ls -la \"C:\\\\Users\\\\rjain\\\\.claude\\\\commands\\\\gsd\"\" 2>nul || dir /B \"C:Usersrjain.claudecommandsgsd\"\")",
+      "Bash(gh auth:*)",
+      "Bash(gh api:*)",
+      "Bash(gh org list:*)",
+      "Bash(for f in sdlc-gate.md sdlc-validate.md sdlc-review.md sdlc-enhance.md sdlc-storyboard.md sdlc-reorg.md sdlc-compliance.md batch-execute.md code-review.md validate-tenancy.md gen-agent.md gen-mcp-server.md gen-extension.md gen-mobile.md gen-load-test.md gen-db-migration.md gen-ci-pipeline.md gen-docker.md gen-api-client.md gen-integration-test.md gen-notification.md gen-webhook.md gen-monitoring.md)",
+      "Bash(do cp \"C:/Users/rjain/.claude/commands/gsd/$f\" \"C:/Users/rjain/tech-vscode/commands/gsd/$f\")",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(for f in sdlc-gate-validator.md sdlc-contract-validator.md sdlc-code-reviewer.md sdlc-enhancer.md sdlc-storyboard-generator.md sdlc-repo-organizer.md gsd-code-reviewer.md)",
+      "Bash(do cp \"C:/Users/rjain/.claude/agents/$f\" \"C:/Users/rjain/tech-vscode/agents/$f\")",
+      "Bash(for f in batch-execute.md gen-agent.md gen-mcp-server.md gen-extension.md gen-mobile.md gen-load-test.md gen-db-migration.md sdlc-compliance.md gen-ci-pipeline.md gen-docker.md gen-api-client.md gen-integration-test.md validate-tenancy.md gen-notification.md code-review.md gen-webhook.md gen-monitoring.md)",
+      "Bash(do cp \"C:/Users/rjain/.claude/get-shit-done/workflows/$f\" \"C:/Users/rjain/tech-vscode/workflows/$f\")",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd Technijian custom GSD skills, agents, workflows, and runner\n\n23 custom commands \\(SDLC pipeline, code generators, review tools\\),\n7 custom agents, 17 workflow files, and gsd-runner.ps1 for automated\nphase execution. Includes cross-platform install scripts.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd sync.ps1 and update gsd-runner.ps1 with CI loop improvements\n\nsync.ps1: Syncs custom skills from ~/.claude/ into the repo for\ndistribution. Detects new, updated, and orphaned files. Supports\n-AutoCommit and -Push flags.\n\ngsd-runner.ps1: Updated with continuous improvement dry-run preview,\nenhanced CI summary with iteration history, and improved logging.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "Bash(dir:*)",
+      "Bash(git --version:*)"
+    ]
+  }
+}
